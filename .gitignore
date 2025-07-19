@@ -1,0 +1,20 @@
+# Dependencies
+/node_modules
+
+# Build artifacts
+/dist
+/screenshots
+
+# Local env files
+.env
+.env.*
+
+# IDE / OS files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
