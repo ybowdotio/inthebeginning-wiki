@@ -5,18 +5,17 @@ set -e
 rm -rf dist
 mkdir dist
 
-# NEW: Only try to copy files if the 'public' directory actually exists.
 if [ -d "public" ]; then
   echo "Found public directory, copying contents..."
   cp -r public/* dist/
 fi
 
-# CORRECTED: The for loop syntax is now fixed.
 for lessonfile in lesson-*.md; do
   name=$(basename -s .md "$lessonfile")
   
   echo "Building $lessonfile -> $name"
-npx slidev build "$lessonfile" --out "dist/$name" --with-clicks --slidev-flags '{"routeBasePath":"/'"$name"'/", "publicPath":"/'"$name"'/"}'
+  # FINAL ATTEMPT: Forcefully setting the route and public paths for assets.
+  npx slidev build "$lessonfile" --out "dist/$name" --with-clicks --slidev-flags '{"routeBasePath":"/'"$name"'/", "publicPath":"/'"$name"'/"}'
 done
 
 echo "All lessons built successfully!"
