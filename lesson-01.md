@@ -97,9 +97,19 @@ So why did we call this lesson "…Abraham?" if the book starts with "In the beg
 </div>
 
 ---
-layout: verse
+layout: center
 ---
 
-> "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee"
->
-> <footer>Genesis 12:1 (KJV)</footer>
+<div class="text-center">
+  <h2 class="text-2xl tracking-widest opacity-80">
+    MEMORY VERSE
+  </h2>
+
+  <blockquote class="text-4xl leading-relaxed mt-8 border-none font-serif italic">
+    "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee"
+  </blockquote>
+
+  <cite class="mt-6 block text-xl opacity-70">
+    Genesis 12:1 (KJV)
+  </cite>
+</div>
