@@ -1,5 +1,5 @@
 <template>
-  <div class="timer-container">
+  <div class="timer-container" :class="{ running: isRunning }">
     <div class="time-display">
       <span>{{ String(minutes).padStart(2, '0') }}</span>
       <span>:</span>
@@ -14,44 +14,59 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onUnmounted } from 'vue'
+import { ref, computed, onUnmounted, watch } from 'vue'
 
 const props = defineProps({
-  duration: { type: Number, default: 5 },
+  duration: { type: Number, default: 2 },
 })
 
-const totalSeconds = ref(props.duration * 60)
+const totalSeconds = ref(0)
 const isRunning = ref(false)
-let intervalId: any = null
+let intervalId: ReturnType<typeof setInterval> | null = null
+
+// Use a 'watcher' to robustly sync the timer's state with the passed-in duration.
+// The { immediate: true } option ensures this runs once as soon as the component is created.
+watch(() => props.duration, (newDuration) => {
+  if (isRunning.value) {
+    pause();
+  }
+  totalSeconds.value = newDuration * 60;
+}, { immediate: true });
 
 const start = () => {
-  if (isRunning.value || totalSeconds.value === 0) return
-  isRunning.value = true
+  if (isRunning.value || totalSeconds.value <= 0) return;
+  isRunning.value = true;
   intervalId = setInterval(() => {
     if (totalSeconds.value > 0) {
-      totalSeconds.value--
+      totalSeconds.value--;
     } else {
-      pause()
-      new Audio('https://www.online-stopwatch.com/sound/finish-sound.mp3').play()
+      pause();
+      // Play a sound when finished, with error handling
+      const audio = new Audio('https://www.online-stopwatch.com/sound/finish-sound.mp3');
+      audio.play().catch(e => console.error("Error playing sound:", e));
     }
-  }, 1000)
+  }, 1000);
 }
 
 const pause = () => {
-  isRunning.value = false
-  clearInterval(intervalId)
+  isRunning.value = false;
+  if (intervalId) {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
 }
 
 const reset = () => {
-  pause()
-  totalSeconds.value = props.duration * 60
+  pause();
+  totalSeconds.value = props.duration * 60;
 }
 
 const minutes = computed(() => Math.floor(totalSeconds.value / 60))
 const seconds = computed(() => totalSeconds.value % 60)
 
+// Ensure the timer is always cleaned up when the slide changes
 onUnmounted(() => {
-  clearInterval(intervalId)
+  pause();
 })
 </script>
 
@@ -65,7 +80,15 @@ onUnmounted(() => {
   width: fit-content;
   margin: 2rem auto;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
+
+/* NEW: This class will be added when the timer is running */
+.timer-container.running {
+  border-color: rgba(110, 231, 183, 0.7);
+  box-shadow: 0 0 25px 5px rgba(52, 211, 153, 0.4);
+}
+
 .time-display {
   font-size: 5rem;
   font-family: 'Courier New', Courier, monospace;
@@ -82,5 +105,8 @@ onUnmounted(() => {
   background-color: #444;
   color: white;
 }
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 </style>
-
