@@ -11,6 +11,7 @@ if [ -d "public" ]; then
   cp -r public/* dist/
 fi
 
+# CORRECTED: The for loop syntax is now fixed.
 for lessonfile in lesson-*.md; do
   name=$(basename -s .md "$lessonfile")
   
