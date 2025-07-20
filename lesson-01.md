@@ -28,7 +28,7 @@ title: 'Genesis Lesson 1: In the Beginning... Abraham?'
     <p class="font-bold leading-tight">Discussion:</p>
     <p class="mt-2">
       How far back can you go in your family? Can you name your great-grandparents? What about your great-great-grandparents? Does anyone know a story about an ancestor that far back?
-    p>
+    </p>
   </div>
 
   <CountdownTimer :start-at-click="1" />
