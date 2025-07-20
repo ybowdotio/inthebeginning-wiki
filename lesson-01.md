@@ -92,6 +92,8 @@ So why did we call this lesson "…Abraham?" if the book starts with "In the beg
 
 </div>
 
+---
+
 <div v-click class="mt-8">
   <p><strong>Discussion:</strong> Why do you think the Bible moves from telling the story of all humanity to focusing so intensely on just one family?</p>
 </div>
