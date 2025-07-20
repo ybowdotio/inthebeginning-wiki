@@ -1,6 +1,5 @@
 ---
-# To use the "seriph" theme, which has a more classic, book-like feel
-theme: 'seriph'
+theme: 'academic'
 title: 'Genesis Lesson 1: In the Beginning... Abraham?'
 ---
 
