@@ -1,17 +1,12 @@
-# This is a simple, standard configuration for ONE Slidev presentation.
-
 [build]
-  # We will build 'lesson-01.md' directly.
-  # The output goes to the default 'dist' folder.
+  # Build 'lesson-01.md' directly.
   command = "npx slidev build lesson-01.md"
   publish = "dist"
 
 [build.environment]
   NODE_VERSION = "20"
 
-# This is the standard redirect rule for a single-page app (SPA).
-# It ensures that no matter what slide you navigate to (e.g., /10),
-# Netlify serves the core app that knows how to display it.
+# Standard redirect rule for a single-page app like Slidev.
 [[redirects]]
   from = "/*"
   to = "/index.html"
