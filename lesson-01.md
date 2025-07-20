@@ -1,27 +1,28 @@
+---
 title: 'Genesis Lesson 1: In the Beginning... Abraham?'
-In the Beginning… Abraham?
+---
+
+# In the Beginning… Abraham?
+
 The story of Genesis begins with the Author’s great, great, great, great Grandpa—and how God began shaping a people through which His Son could one day step into our world.
+
 <div class="absolute bottom-10 right-12 text-right text-sm">
 <em>The Calling. The Covenant. The birth of Israel as the divine framework—an ancestral cradle—through which the Son of God would enter the world.</em>
 </div>
 
-<!--
-Visual Idea: A stylized desert path winding toward a bright horizon — no people in sight yet — with faint overlays of stars, subtly forming a cross.
--->
+---
 
-<h1 class="text-6xl">Let's Talk Ancestors</h1>
+# Let's Talk Ancestors
 
 The title slide mentions the "Author's great, great, great, great Grandpa." It's a fun way to think about how deep our own stories go.
 
-Discussion: How far back can you go in your family? Can you name your great-grandparents? What about your great-great-grandparents? Does anyone know a story about an ancestor that far back?
+**Discussion:** How far back can you go in your family? Can you name your great-grandparents? What about your great-great-grandparents? Does anyone know a story about an ancestor that far back?
 
-<!--
-To add a 3-minute timer for this discussion, just add this line:
-<CountdownTimer duration="3" />
--->
+---
 
-What if Genesis doesn’t start where you think it does?
-Everyone knows the Bible opens with the words “In the beginning…” But what if that’s not really where the story you belong to begins?
+# Where the Story Begins
+
+What if Genesis doesn’t start where you think it does? Everyone knows the Bible opens with the words “In the beginning…” But what if that’s not really where the story *you* belong to begins?
 
 The creation of the world is a prologue. The real action begins when God calls one man out of the noise of nations to begin shaping a family line through whom His Son would one day step into our world in real flesh & blood.
 
@@ -29,11 +30,13 @@ The creation of the world is a prologue. The real action begins when God calls o
 Genesis isn’t just about how the world started—it’s about how the plan to save you started.
 </div>
 
-<h1 class="text-6xl font-merriweather font-bold">God’s Call, Our Beginning</h1>
+---
 
-“Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee: And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing: And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed.”
+# God’s Call, Our Beginning
 
-<footer>— Genesis 12:1–3 (KJV)</footer>
+> “Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee: And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing: And I will bless them that bless thee, and curse him that curseth thee: and in thee shall all families of the earth be blessed.”
+>
+> <footer>— Genesis 12:1–3 (KJV)</footer>
 
 This is the moment everything changes. God didn’t start by giving rules. He started by giving a promise—to one man, for the sake of all.
 
@@ -41,7 +44,9 @@ This is the moment everything changes. God didn’t start by giving rules. He st
 The first step toward Jesus was a man stepping out in faith.
 </div>
 
-<h1 class="text-6xl">Two Halves of One Book</h1>
+---
+
+# Two Halves of One Book
 
 So why did we call this lesson "...Abraham?" if the book starts with "In the beginning..."?
 
@@ -64,16 +69,12 @@ So why did we call this lesson "...Abraham?" if the book starts with "In the beg
 </div>
 </div>
 
-Discussion: Why The Shift?
-Why do you think the Bible moves from telling the story of all humanity (Creation, the Flood) to focusing so intensely on just one man, Abraham, and his family?
+**Discussion:** Why do you think the Bible moves from telling the story of all humanity to focusing so intensely on just one family?
 
-<!--
-To add a 5-minute timer for this discussion, just add this line:
-<CountdownTimer duration="5" />
--->
-
+---
 layout: verse
-Memory Verse
-"Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee"
+---
 
-<footer>Genesis 12:1 (KJV)</footer>
+> "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee"
+>
+> <footer>Genesis 12:1 (KJV)</footer>
