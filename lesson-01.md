@@ -31,8 +31,6 @@ title: 'Genesis Lesson 1: In the Beginning... Abraham?'
     </p>
   </div>
 
-  <CountdownTimer :start-at-click="2" />
-
 </div>
 
 ---
