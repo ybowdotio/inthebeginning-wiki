@@ -1,8 +1,8 @@
 ---
 theme: 'academic'
 title: 'Genesis Lesson 1: In the Beginning... Abraham?'
-# This new line disables the theme's default footer (the date)
-footer: ''
+# This tells the 'academic' theme to render nothing in the footer info spot.
+info: null
 ---
 
 # In the Beginning… Abraham?
