@@ -1,8 +1,14 @@
 # Netlify deployment configuration for a Slidev project
-
 [build]
   command = "npm run build"
   publish = "dist"
+
+# This rule is essential for single-page applications like Slidev.
+# It ensures that all paths are handled by the app's router.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
 [build.environment]
   # Set the Node.js version to a recent, stable version.
