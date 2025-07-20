@@ -92,22 +92,24 @@ So why did we call this lesson "…Abraham?" if the book starts with "In the beg
 
 </div>
 
----
-
 <div v-click class="mt-8">
   <p><strong>Discussion:</strong> Why do you think the Bible moves from telling the story of all humanity to focusing so intensely on just one family?</p>
 </div>
 
+---
+
 <div class="w-3/4 mx-auto my-auto text-left">
+
   <h2 class="text-xl tracking-widest opacity-60 mb-4">
     MEMORY VERSE
   </h2>
   
   <blockquote class="text-5xl font-sans leading-tight pl-8 border-l-4 border-blue-400">
-    "Now the LORD had said unto Abram..."
+    "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee:"
   </blockquote>
 
   <cite class="mt-6 block text-right text-xl opacity-70">
     Genesis 12:1 (KJV)
   </cite>
+  
 </div>
