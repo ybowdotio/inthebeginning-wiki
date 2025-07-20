@@ -31,7 +31,14 @@ title: 'Genesis Lesson 1: In the Beginning... Abraham?'
     </p>
   </div>
 
-  <CountdownTimer :duration="2" />
+  <div class="mt-8 text-center">
+    <button 
+      class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+      onclick="window.open('https://www.google.com/search?q=2+minute+timer', 'timerWindow', 'width=400,height=400,scrollbars=no,resizable=yes')"
+    >
+      Start 2-Minute Discussion Timer
+    </button>
+  </div>
 
 </div>
 
