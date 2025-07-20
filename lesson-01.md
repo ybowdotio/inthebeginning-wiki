@@ -19,9 +19,22 @@ title: 'Genesis Lesson 1: In the Beginning... Abraham?'
 
 # Let's Talk Ancestors
 
-The title slide mentions the "Author's great, great, great, great Grandpa." It's a fun way to think about how deep our own stories go.
+<div class="w-2/3 mx-auto">
+  <p class="text-lg">
+    The title slide mentions the "Author's great, great, great, great Grandpa." It's a fun way to think about how deep our own stories go.
+  </p>
 
-**Discussion:** How far back can you go in your family? Can you name your great-grandparents? What about your great-great-grandparents? Does anyone know a story about an ancestor that far back?
+  <div class="mt-10 p-6 bg-gray-500/10 rounded-xl text-lg">
+    <p class="font-bold leading-tight">Discussion:</p>
+    <p class="mt-2">
+      How far back can you go in your family? Can you name your great-grandparents? What about your great-great-grandparents? Does anyone know a story about an ancestor that far back?
+    </p>
+  </div>
+
+  <div v-click>
+    <Timer :duration="2" />
+  </div>
+</div>
 
 ---
 
