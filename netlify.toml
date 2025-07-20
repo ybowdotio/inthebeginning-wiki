@@ -1,8 +1,8 @@
-# Run our new script to build all lessons automatically
 [build]
+  # This just runs the script
   command = "bash build-all.sh"
+  # This is the folder that gets deployed
   publish = "dist"
 
 [build.environment]
-  # Set the Node.js version to a recent, stable version.
   NODE_VERSION = "20"
