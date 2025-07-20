@@ -28,17 +28,10 @@ title: 'Genesis Lesson 1: In the Beginning... Abraham?'
     <p class="font-bold leading-tight">Discussion:</p>
     <p class="mt-2">
       How far back can you go in your family? Can you name your great-grandparents? What about your great-great-grandparents? Does anyone know a story about an ancestor that far back?
-    </p>
+    p>
   </div>
 
-  <div class="mt-8 text-center">
-    <button 
-      class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
-      onclick="window.open('https://www.google.com/search?q=2+minute+timer', 'timerWindow', 'width=400,height=400,scrollbars=no,resizable=yes')"
-    >
-      Start 2-Minute Discussion Timer
-    </button>
-  </div>
+  <CountdownTimer :start-at-click="1" />
 
 </div>
 
