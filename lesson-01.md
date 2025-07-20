@@ -5,12 +5,14 @@ title: 'Genesis Lesson 1: In the Beginning... Abraham?'
 
 # In the Beginning… Abraham?
 
-<div class="w-3/4 mx-auto">
-  The story of Genesis begins with the Author’s great, great, great, great Grandpa—and how God began shaping a people through which His Son could one day step into our world.
+<div v-click class="w-3/4 mx-auto">
+The story of Genesis begins with the Author’s great, great, great, great Grandpa—and how God began shaping a people through which His Son could one day step into our world.
 </div>
 
-<div v-click class="text-center text-sm mt-12">
-  <em>The Calling. The Covenant. The birth of Israel as the divine framework—an ancestral cradle—through which the Son of God would enter the world.</em>
+<div v-click class="text-center text-sm mt-8">
+  <div v-click><em>The Calling.</em></div>
+  <div v-click><em>The Covenant.</em></div>
+  <div v-click><em>The birth of Israel as the divine framework—an ancestral cradle—through which the Son of God would enter the world.</em></div>
 </div>
 
 ---
