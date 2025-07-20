@@ -37,12 +37,17 @@ title: 'Genesis Lesson 1: In the Beginning... Abraham?'
 
 # Where the Story Begins
 
-What if Genesis doesn’t start where you think it does? Everyone knows the Bible opens with the words “In the beginning…” But what if that’s not really where the story *you* belong to begins?
+What if Genesis doesn't start where you think it does? Everyone knows the Bible opens with the words “In the beginning…” But what if that’s not really where the story *you* belong to begins?
 
+<div v-click>
 The creation of the world is a prologue. The real action begins when God calls one man out of the noise of nations to begin shaping a family line through whom His Son would one day step into our world in real flesh & blood.
+</div>
 
-<div class="mt-12 text-2xl font-bold text-sky-300 border-t-2 border-sky-300/50 pt-6">
-Genesis isn’t just about how the world started—it’s about how the plan to save you started.
+<div v-click class="mt-12">
+  <hr />
+  <p class="text-2xl text-center text-blue-400 mt-4">
+    Genesis isn’t just about how the world started—it’s about how the plan to save you started.
+  </p>
 </div>
 
 ---
