@@ -68,28 +68,33 @@ The first step toward Jesus was a man stepping out in faith.
 
 # Two Halves of One Book
 
-So why did we call this lesson "...Abraham?" if the book starts with "In the beginning..."?
+So why did we call this lesson "…Abraham?" if the book starts with "In the beginning…"?
 
-<div class="grid grid-cols-2 gap-12 mt-8 text-left">
-<div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
-<h3 class="text-2xl text-white text-center">Chapters 1-11: Primeval History</h3>
-<ul class="mt-4 text-lg">
-<li>Creation, The Fall</li>
-<li>The Flood, Tower of Babel</li>
-<li class="font-bold text-sky-300">Deals with God and the whole world.</li>
-</ul>
-</div>
-<div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
-<h3 class="text-2xl text-white text-center">Chapters 12-50: Patriarchal History</h3>
-<ul class="mt-4 text-lg">
-<li>Abraham, Isaac, Jacob</li>
-<li>Joseph</li>
-<li class="font-bold text-sky-300">God narrows his focus to one family.</li>
-</ul>
-</div>
+<div class="grid grid-cols-2 gap-8 mt-4">
+
+  <div v-click class="p-6 rounded-lg bg-gray-500/20">
+    <h3 class="text-xl font-bold">Chapters 1-11: Primeval History</h3>
+    <ul class="list-disc list-inside mt-2">
+      <li>Creation, The Fall</li>
+      <li>The Flood, Tower of Babel</li>
+      <li class="text-blue-400">Deals with God and the whole world.</li>
+    </ul>
+  </div>
+
+  <div v-click class="p-6 rounded-lg bg-gray-500/20">
+    <h3 class="text-xl font-bold">Chapters 12-50: Patriarchal History</h3>
+    <ul class="list-disc list-inside mt-2">
+      <li>Abraham, Isaac, Jacob</li>
+      <li>Joseph</li>
+      <li class="text-blue-400">God narrows his focus to one family.</li>
+    </ul>
+  </div>
+
 </div>
 
-**Discussion:** Why do you think the Bible moves from telling the story of all humanity to focusing so intensely on just one family?
+<div v-click class="mt-8">
+  <p><strong>Discussion:</strong> Why do you think the Bible moves from telling the story of all humanity to focusing so intensely on just one family?</p>
+</div>
 
 ---
 layout: verse
