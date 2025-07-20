@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onUnmounted, watch } from 'vue'
+import { ref, computed, onUnmounted, watch, onMounted } from 'vue'
 
 const props = defineProps({
   duration: { type: Number, default: 2 },
@@ -24,17 +24,30 @@ const totalSeconds = ref(0)
 const isRunning = ref(false)
 let intervalId: ReturnType<typeof setInterval> | null = null
 
+// --- DIAGNOSTIC LOGS ---
+
+onMounted(() => {
+  console.log('LIFECYCLE: Component has been mounted.');
+});
+
+onUnmounted(() => {
+  console.log('LIFECYCLE: Component is unmounting, calling pause().');
+  pause();
+})
+
 watch(() => props.duration, (newDuration) => {
+  console.log('WATCHER: Watcher is now running.');
   if (isRunning.value) {
+    console.log('WATCHER: isRunning is true, calling pause().');
     pause();
   }
   totalSeconds.value = newDuration * 60;
 }, { immediate: true });
 
+// --- CORE FUNCTIONS ---
+
 const start = () => {
-  // This is the key diagnostic message.
-  console.log('Start button clicked!');
-  
+  console.log('CLICK: Start button clicked.');
   if (isRunning.value || totalSeconds.value <= 0) return;
   isRunning.value = true;
   intervalId = setInterval(() => {
@@ -49,7 +62,7 @@ const start = () => {
 }
 
 const pause = () => {
-  console.log('Pause button clicked!');
+  console.log('ACTION: pause() function was executed.');
   isRunning.value = false;
   if (intervalId) {
     clearInterval(intervalId);
@@ -58,7 +71,7 @@ const pause = () => {
 }
 
 const reset = () => {
-  console.log('Reset button clicked!');
+  console.log('CLICK: Reset button clicked, calling pause().');
   pause();
   totalSeconds.value = props.duration * 60;
 }
@@ -66,12 +79,10 @@ const reset = () => {
 const minutes = computed(() => Math.floor(totalSeconds.value / 60))
 const seconds = computed(() => totalSeconds.value % 60)
 
-onUnmounted(() => {
-  pause();
-})
 </script>
 
 <style scoped>
+/* Styles are unchanged, you can leave them as they were */
 .timer-container {
   text-align: center;
   background-color: rgba(34, 34, 34, 0.9);
@@ -82,17 +93,13 @@ onUnmounted(() => {
   margin: 2rem auto;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
-  
-  /* Bring the timer to the front to avoid being covered by other elements */
   position: relative;
   z-index: 100;
 }
-
 .timer-container.running {
   border-color: rgba(110, 231, 183, 0.7);
   box-shadow: 0 0 25px 5px rgba(52, 211, 153, 0.4);
 }
-
 .time-display {
   font-size: 5rem;
   font-family: 'Courier New', Courier, monospace;
@@ -109,16 +116,12 @@ onUnmounted(() => {
   background-color: #444;
   color: white;
   transition: all 0.1s ease;
-
-  /* Ensure clicks are not being ignored by CSS */
   pointer-events: auto !important;
 }
 .controls button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-/* NEW: Add visual feedback for hover and click */
 .controls button:not(:disabled):hover {
   background-color: #666;
 }
