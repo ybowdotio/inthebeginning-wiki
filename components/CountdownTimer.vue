@@ -1,5 +1,5 @@
 <template>
-  <div class="timer-container" :class="{ running: isRunning }">
+  <div class="timer-container">
     <div class="time-display">
       <span>{{ String(minutes).padStart(2, '0') }}</span>
       <span>:</span>
@@ -24,8 +24,6 @@ const totalSeconds = ref(0)
 const isRunning = ref(false)
 let intervalId: ReturnType<typeof setInterval> | null = null
 
-// Use a 'watcher' to robustly sync the timer's state with the passed-in duration.
-// The { immediate: true } option ensures this runs once as soon as the component is created.
 watch(() => props.duration, (newDuration) => {
   if (isRunning.value) {
     pause();
@@ -34,6 +32,9 @@ watch(() => props.duration, (newDuration) => {
 }, { immediate: true });
 
 const start = () => {
+  // This is the key diagnostic message.
+  console.log('Start button clicked!');
+  
   if (isRunning.value || totalSeconds.value <= 0) return;
   isRunning.value = true;
   intervalId = setInterval(() => {
@@ -41,7 +42,6 @@ const start = () => {
       totalSeconds.value--;
     } else {
       pause();
-      // Play a sound when finished, with error handling
       const audio = new Audio('https://www.online-stopwatch.com/sound/finish-sound.mp3');
       audio.play().catch(e => console.error("Error playing sound:", e));
     }
@@ -49,6 +49,7 @@ const start = () => {
 }
 
 const pause = () => {
+  console.log('Pause button clicked!');
   isRunning.value = false;
   if (intervalId) {
     clearInterval(intervalId);
@@ -57,6 +58,7 @@ const pause = () => {
 }
 
 const reset = () => {
+  console.log('Reset button clicked!');
   pause();
   totalSeconds.value = props.duration * 60;
 }
@@ -64,7 +66,6 @@ const reset = () => {
 const minutes = computed(() => Math.floor(totalSeconds.value / 60))
 const seconds = computed(() => totalSeconds.value % 60)
 
-// Ensure the timer is always cleaned up when the slide changes
 onUnmounted(() => {
   pause();
 })
@@ -73,7 +74,7 @@ onUnmounted(() => {
 <style scoped>
 .timer-container {
   text-align: center;
-  background-color: rgba(34, 34, 34, 0.8);
+  background-color: rgba(34, 34, 34, 0.9);
   color: white;
   padding: 2rem;
   border-radius: 15px;
@@ -81,9 +82,12 @@ onUnmounted(() => {
   margin: 2rem auto;
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+  
+  /* Bring the timer to the front to avoid being covered by other elements */
+  position: relative;
+  z-index: 100;
 }
 
-/* NEW: This class will be added when the timer is running */
 .timer-container.running {
   border-color: rgba(110, 231, 183, 0.7);
   box-shadow: 0 0 25px 5px rgba(52, 211, 153, 0.4);
@@ -104,9 +108,22 @@ onUnmounted(() => {
   cursor: pointer;
   background-color: #444;
   color: white;
+  transition: all 0.1s ease;
+
+  /* Ensure clicks are not being ignored by CSS */
+  pointer-events: auto !important;
 }
 .controls button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* NEW: Add visual feedback for hover and click */
+.controls button:not(:disabled):hover {
+  background-color: #666;
+}
+.controls button:not(:disabled):active {
+  background-color: #888;
+  transform: scale(0.97);
 }
 </style>
