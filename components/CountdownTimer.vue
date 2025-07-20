@@ -1,5 +1,5 @@
 <template>
-  <div class="timer-container">
+  <div class="timer-container" @click.stop>
     <div class="time-display">
       <span>{{ String(minutes).padStart(2, '0') }}</span>
       <span>:</span>
