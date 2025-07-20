@@ -1,14 +1,7 @@
-# Netlify deployment configuration for a Slidev project
+# Run our new script to build all lessons automatically
 [build]
-  command = "npm run build"
+  command = "bash build-all.sh"
   publish = "dist"
-
-# This rule is essential for single-page applications like Slidev.
-# It ensures that all paths are handled by the app's router.
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
 
 [build.environment]
   # Set the Node.js version to a recent, stable version.
