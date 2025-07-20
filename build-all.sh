@@ -16,7 +16,7 @@ for lessonfile in lesson-*.md; do
   name=$(basename -s .md "$lessonfile")
   
   echo "Building $lessonfile -> $name"
-  npx slidev build "$lessonfile" --out "dist/$name" --base "/$name/"
+npx slidev build "$lessonfile" --out "dist/$name" --with-clicks --slidev-flags '{"routeBasePath":"/'"$name"'/", "publicPath":"/'"$name"'/"}'
 done
 
 echo "All lessons built successfully!"
