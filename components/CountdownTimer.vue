@@ -18,22 +18,19 @@
 
 <script setup lang="ts">
 import { ref, computed, watch, onUnmounted } from 'vue'
-// This is the magic import that gives us access to Sli.dev's state
 import { $slidev } from '@slidev/client/nav.ts'
 
 const props = defineProps({
-  // This new prop tells the timer when to start
   startAtClick: {
     type: Number,
     required: true,
   },
 })
 
-const totalSeconds = ref(120) // 2 minutes
+const totalSeconds = ref(120)
 const isRunning = ref(false)
 let intervalId: ReturnType<typeof setInterval> | null = null
 
-// --- Core Timer Logic ---
 const start = () => {
   if (isRunning.value || totalSeconds.value <= 0) return
   isRunning.value = true
@@ -62,13 +59,14 @@ const reset = () => {
 const minutes = computed(() => Math.floor(totalSeconds.value / 60))
 const seconds = computed(() => totalSeconds.value % 60)
 
-// This is the new key feature:
-// We watch the slide's click counter.
+// This watcher will print every click change to the console.
 watch(
   () => $slidev.nav.clicks,
-  (newClickCount) => {
+  (newClickCount, oldClickCount) => {
+    console.log(`DIAGNOSTIC: Click count changed from ${oldClickCount} to ${newClickCount}. Timer expects to start at click #${props.startAtClick}.`);
     if (newClickCount === props.startAtClick) {
-      start()
+      console.log('CONDITION MET: Starting timer!');
+      start();
     }
   }
 )
