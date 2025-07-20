@@ -32,7 +32,7 @@ title: 'Genesis Lesson 1: In the Beginning... Abraham?'
   </div>
 
   <div v-click>
-    <Timer :duration="2" />
+    <CountdownTimer :duration="2" />
   </div>
 </div>
 
